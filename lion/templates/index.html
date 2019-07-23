@@ -1,13 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>Esse é o projeto Django Thundercats</h1>
-    <h3>Estamos na aplicação Lion do projeto Thundercats</h3>
+    <p>Esse é o perfil para {{ nome }}</p>
+    {% if nome == "cachorro" %}
+        <p>sim esta é a página de cachorro</p>
+    {% elif nome == "Dog" %}
+        <p>esta é a página é para dog</p>
+    {% else  %}
+        <p>esta página não é para você</p>
+    {% endif %}
+
+    <h1>Conheça nossos Dogs</h1>
+    <ul>
+    {% for dog in cachorros %}
+        <li>{{ dog }}</li>
+    {% endfor %}
+    </ul>
+    <h3>Estamos na aplicação Lion do projeto Mama Mia</h3>
+
 </body>
 </html>

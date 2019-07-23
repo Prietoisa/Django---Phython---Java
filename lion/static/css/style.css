@@ -1,0 +1,14 @@
+hi{
+    color: salmon;
+}
+
+h3 {
+    color: coral ;
+}
+
+body{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
